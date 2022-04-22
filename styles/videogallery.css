@@ -220,6 +220,7 @@ footer p {
 
     .videowrapper {
         width: 100%;
+        border: none;
     }
 
     .caption {
