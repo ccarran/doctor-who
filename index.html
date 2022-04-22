@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- Google Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Syne&display=swap" rel="stylesheet">
+
+    <title>Dr. Who</title>
+</head>
+<body>
+    <header class="clearfix">
+        <a href="index.html"><img id="logoimage" src="images/logo.png"></a>
+        <h2>Doctor Who</h2>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="imagegallery.html">Enemies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="videogallery.html">Best Moments</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="slideshow.html">Through the Ages</a>
+                </li>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <main>
+        <div>
+            <img src="images/all-doctors1.jpg">
+        </div>
+        <section>
+            <h1>Doctor Who</h1>
+            <img src="images/tardis.webp">
+            <p>Doctor Who is a British science fiction television programme broadcast by the BBC since 1963. The programme depicts the adventures of a Time Lord called the Doctor, an extraterrestrial being who appears to be human. The Doctor explores the universe in a time-travelling space ship called the TARDIS. The TARDIS exterior appears as a blue British police box, which was a common sight in Britain in 1963 when the series first aired. With various companions, the Doctor combats foes, works to save civilisations and helps people in need.</p>
+        </section>
+
+        <div><button onclick="topFunction()" id="cornerBtn" title="Go to top">Return To Top</button></div>
+        <script>
+            // When the user scrolls down 800px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+         
+            function scrollFunction() {
+                if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                    document.getElementById("cornerBtn").style.display = "block";
+                } else {
+                    document.getElementById("cornerBtn").style.display = "none";
+                }
+            }
+         
+             // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+         </script>
+    </main>
+
+	<!-- Javascript - Get Current Year for the Footer -->
+	<script>
+		window.onload = function() {
+			var d = new Date();
+			document.getElementById("copyright").innerHTML = d.getFullYear();
+		}
+	</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+	<footer>
+		<p>&#169; <span id="copyright"></span> Cesar Carranza Productions</p>
+	</footer>
+</body>
+</html>

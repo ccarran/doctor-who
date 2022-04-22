@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+html {
+    background-image: url(../images/bg.jpg);
+    background-attachment: fixed;
+    font-family: 'Syne';
+}
+
+body {
+    font-size: 110%;
+    background-color: rgba(0, 0, 0, .8);
+}
+main{
+    height: 100%;
+}
+
+header {
+    border-bottom: 3px solid #457F8C;
+    padding: 30px 0;
+    background-color: white;
+    background-image: linear-gradient(to bottom, black, #457F8C);
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-around;
+}
+header h2 {
+    text-align: center;
+    font-size: 350%;
+    flex-basis: 100%;
+    padding-top: 12px;
+    color: white;
+}
+
+#logoimage {
+    max-width: 200px;
+    max-height: 100px;
+    flex-basis: 25%;
+    width: 100%;
+    float: left;
+    margin: 0 2em;
+}
+
+div img {
+    max-width: 100%;
+}
+
+section {
+    margin-top: 1%;
+    text-align: center;
+    color: white;
+}
+section img {
+    float: left;
+    max-width: 100%;
+}
+section h1 {
+    font-size: 250%;
+}
+section p {
+    margin-top: 13%;
+    text-align: justify;
+    padding: 0 10%;
+}
+
+#cornerBtn {
+    display: none;
+    position: fixed;
+    right: 5px;
+    bottom: 50px;
+    z-index: 99; /* Make sure it does not overlap */
+    border: 1px solid black;
+    outline: none; /* Remove outline */
+    font-weight: bold;
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: .5em .5em;
+    margin: 0 1em 3px 0;
+    font-size: 100%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+    transition: all .5s;
+}
+ #cornerBtn:hover {
+    background-color: rgba(0,0,0,1);
+    color: red;
+    border: 1px solid red;
+}
+
+footer {
+    clear: both;
+    padding: 25px 0;
+    border-top: 3px;
+}
+footer p {
+    text-align: center;
+    font-size: 90%;
+    color: white;
+}
+
+@media (max-width: 1000px) {
+    header {
+        display: block;
+        text-align: center;
+    }
+    #logoimage {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+
+    header h2 {
+        font-size: 300%;
+    }
+
+    section h1 {
+        font-size: 200%;
+    }
+    section p {
+        margin-top: 3%;
+    }
+    section img {
+        display: none;
+    }
+}
+
+  /* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    header h2 {
+        font-size: 250%;
+    }
+
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+  
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    header h2 {
+        font-size: 200%;
+    }
+    
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
